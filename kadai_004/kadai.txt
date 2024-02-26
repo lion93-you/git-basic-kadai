@@ -1,0 +1,38 @@
+apple@MacBook-Pro karento % mkdir git_challenge
+apple@MacBook-Pro karento % cd git_challenge
+apple@MacBook-Pro git_challenge % git init
+Initialized empty Git repository in /Users/apple/Desktop/karento/git_challenge/.git/
+
+apple@MacBook-Pro git_challenge % git add hell_world.txt
+fatal: pathspec 'hell_world.txt' did not match any files
+apple@MacBook-Pro git_challenge % git add hell_world.txt
+fatal: pathspec 'hell_world.txt' did not match any files
+apple@MacBook-Pro git_challenge % git add .
+apple@MacBook-Pro git_challenge % git  commit -m"hello_world.txtを追加"
+[main (root-commit) ae8d265] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+apple@MacBook-Pro git_challenge % git add hello_world.txt
+apple@MacBook-Pro git_challenge % git commit -m"日本語訳を追記"
+[main 02a828c] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+apple@MacBook-Pro git_challenge % git status
+On branch main
+nothing to commit, working tree clean
+apple@MacBook-Pro git_challenge % git diff hell_world
+fatal: ambiguous argument 'hell_world': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+apple@MacBook-Pro git_challenge % git log
+commit 02a828ca62a45a0da1c54ee857b84ee52b62d7b4 (HEAD -> main)
+Author: lion93-you <lion.93910@gmail.com>
+Date:   Mon Feb 26 19:58:13 2024 +0900
+
+    日本語訳を追記
+
+commit ae8d265719f7bd394a9b658c2b1575261b87e698
+Author: lion93-you <lion.93910@gmail.com>
+Date:   Mon Feb 26 19:56:14 2024 +0900
+
+    hello_world.txtを追加
+apple@MacBook-Pro git_challenge % 
